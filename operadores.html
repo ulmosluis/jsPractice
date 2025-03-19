@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short-Circuit Evaluation</title>
+</head>
+<body>
+    <script>
+        // Example of OR (||) short-circuit evaluation
+        let name = null;
+        let defaultName = "Guest";
+        let displayName = name || defaultName;
+        alert(displayName); // Output: "Guest"
+
+        // Example of AND (&&) short-circuit evaluation
+        let isLoggedIn = true;
+        let userRole = isLoggedIn && "Admin";
+        alert(userRole); // Output: "Admin"
+
+        // Combining both
+        let result = null || (isLoggedIn && "Welcome!");
+        alert(result); // Output: "Welcome!"
+    </script>
+</body>
+</html>

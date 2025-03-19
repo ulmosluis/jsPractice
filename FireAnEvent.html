@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('from onclick event!')">Click me 1</button>
+    <button onclick="clicker()">Click me 2</button>
+    <button onclick="alert('from onclick event!')" id="myButton3">Click me 3</button>
+    <button onclick="alert('from onclick event!')" id="myButton4">Click me 4</button>
+    <script>
+        // Get the button elements by their IDs
+        const button3 = document.getElementById('myButton3');
+        const button4 = document.getElementById('myButton4');
+
+        // Add an event listener to button3
+        button3.addEventListener('click', function() {
+            alert("You clicked me from an event listener!");
+        });
+
+        // Define the clicker function
+        function clicker() {
+            alert("You clicked me from a function!");
+        }
+
+        // Add an event listener to button4
+        button4.addEventListener('click', clicker);
+    </script>
+</body>
+</html>
